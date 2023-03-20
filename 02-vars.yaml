@@ -12,4 +12,10 @@
       ansible.builtin.debug:
         msg: The value of url is {{URL}}
       vars:
-        URL: task.google.com   # varibale dec;ared at task level; will super seed the global variable
+        URL: task.google.com   # varibale declared at task level; will super seed the global variable
+
+    - name: printing the URL from the Task
+      ansible.builtin.debug:
+        msg: "{{URL}}" 
+      vars:
+        URL: task.google.com   # varibale declared at task level; will super seed the global variable
