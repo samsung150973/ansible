@@ -12,6 +12,6 @@
 - name: Play2
   hosts: dev # mention name of the inventory group
   tasks:
-    - name: Print Hello from play2
+    - name: Print Hello from play2 of task1
       ansible.builtin.debug:
-        msg: Hello from task1 of play2
+        msg: Hello from task1 from play2
