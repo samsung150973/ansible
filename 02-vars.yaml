@@ -1,8 +1,11 @@
 - name: Demo of variables
   hosts: all
   vars:
-    URL: play.google.com
+    URL: play.google.com  #global variable if declared here
   tasks:
     - name: printing the URL Task
       ansible.builtin.debug:
         msg: The value of url is {{URL}}
+      vars:
+        URL: task.google.com   # varibale dec;ared at task level; will super seed the global variable
+        
