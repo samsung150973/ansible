@@ -19,3 +19,8 @@
         msg: "{{URL}}" # when printing only varibale without comments, it should be given in quotes
       vars:
         URL: task.google.com   # varibale declared at task level; will super seed the global variable
+    
+    - name: printing the URL by input from the command line
+      ansible.builtin.debug:
+        msg: "{{CMD_URL}}" # when printing only varibale without comments, it should be given in quotes
+    
