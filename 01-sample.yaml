@@ -1,0 +1,12 @@
+#skills:
+ # -python
+ # -erlang
+ # -lisp
+
+# ---  # end of file
+# supply argumants in multi-line |  ( use pipe)
+#   line2 |
+#   line3
+# key with multiple value is referred as List
+# key with multiple key value pairs is referred as MAP
+# in ANSIBLE to autonamte ; write playbooks
