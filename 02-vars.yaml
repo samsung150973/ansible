@@ -24,3 +24,4 @@
       ansible.builtin.debug:
         msg: "{{CMD_URL}}" # when printing only varibale without comments, it should be given in quotes
     
+    #ansible-playbook -i inv -e CMD_URL=cli.google.com ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
