@@ -16,6 +16,6 @@
 
     - name: printing the URL from the Task
       ansible.builtin.debug:
-        msg: "{{URL}}" 
+        msg: "{{URL}}" # varibale without commants should be given in quotes
       vars:
         URL: task.google.com   # varibale declared at task level; will super seed the global variable
