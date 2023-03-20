@@ -1,0 +1,9 @@
+- name:
+  hosta: all
+  vars:
+    URL: play.google.com
+  tasks:
+    -name: printing the URL Task
+      ansible.builtin.debug:
+        msg: The value of URL is {{URL}}
+        
