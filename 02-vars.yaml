@@ -1,5 +1,5 @@
 - name: Demo of variables
-  hosta: all
+  host: all
   vars:
     URL: play.google.com
   tasks:
