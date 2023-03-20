@@ -25,3 +25,5 @@
         msg: "{{CMD_URL}}" # when printing only varibale without comments, it should be given in quotes
     
     #ansible-playbook -i inv -e CMD_URL=cli.google.com -e ansible_user=centos -e ansible_password=DevOps321 02-vars.yaml
+    # in-line or variables suppled in command line have higher precedence over global & local variables
+    
