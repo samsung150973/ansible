@@ -9,4 +9,5 @@
     ansible.builtin.debug: 
       msg: starting Nginx server
 
-# as the process is not running , it throws out an error; eventhough the YAML script is ok. so, use ignore_errors= yes
+# as Nginx is not running , it throws an error; but the YAML script is ok. so, use ignore_errors= yes as continue with script execution
+
