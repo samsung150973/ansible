@@ -4,4 +4,9 @@
   - name: Execute when  distribution in CentOs
       ansible.builtin.debug:
         msg: welcome to CentOs
+      when: ansible_distribution == "CentOs"
+  
+  - name: Execute when  distribution in CentOs
+      ansible.builtin.debug:
+        msg: welcome to Ubuntu
       when: ansible_distribution == "Ubuntu"
