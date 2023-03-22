@@ -17,5 +17,11 @@
     ansible.builtin.debug:
       msg: action is true
     when: action
-
     # wil execute the above code as the action is set to true.
+
+  - name: Run this task when the variable is not declared
+    ansible.builtin.debug:
+      msg: Variable Action is Not defined
+    when: action123 is not defined
+    #  as the variable is not defined, the above will be executed
+  
