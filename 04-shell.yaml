@@ -2,8 +2,7 @@
 - name: Demo of variables
   hosts: all
   tasks:
-
   - name: demo using shell Modeule
-    ansible.builtin.shell:uptime
+    ansible.builtin.shell: uptime
 
 # restart all machine whaich are uptime more than 6 months 
