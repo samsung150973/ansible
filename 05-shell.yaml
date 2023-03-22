@@ -3,7 +3,10 @@
   tasks:
   - name: check Nginx is running or not
     ansible.builtin.shell: ps -ef | grep nginx | grep-v grep
+    ignore_errors: yes
 
   - name: Starting Nginx
     ansible.builtin.debug: 
       msg: starting Nginx server
+
+# as the process is not running , it throws out an error; eventhough the YAML script is ok. so, use ignore_errors= yes
