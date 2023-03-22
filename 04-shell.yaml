@@ -8,6 +8,6 @@
 
   - name: Print the OUT register
     ansible.builtin.debug:
-    msg: "{{OUT}}" # name of a variable
+     msg: "{{OUT}}"
 
 # The output is not as expected. Need to register the output
