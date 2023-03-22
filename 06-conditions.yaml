@@ -1,5 +1,7 @@
 - name: check if service is running or not
   hosts: all
+  vars:
+    action: true
   tasks:
   - name: Execute when  distribution in CentOs
     ansible.builtin.debug:
@@ -10,3 +12,10 @@
     ansible.builtin.debug:
       msg: welcome to Ubuntu
     when: ansible_distribution == "Ubuntu"
+
+  - name: Run the action
+    ansible.builtin.debug:
+      msg: action is true
+    when: action
+
+    # wil execute the above code as the action is set to true.
