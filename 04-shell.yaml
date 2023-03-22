@@ -10,4 +10,13 @@
     ansible.builtin.debug:
      msg: "{{OUT.stdout}}"
 
+  - name: Printing th eexit code RC from Uptime command
+    ansible.builtin.set_fact:
+     STATUS_CODE: "{{OUT.rc}}"
+
+  - name: Printing th eexit code RC from Uptime command
+    ansible.builtin.debug:
+     msg: "{{OUT.rc}}"
+
+
 # The output is not as expected. Need to register the output
