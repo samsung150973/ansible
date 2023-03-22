@@ -16,4 +16,5 @@
 # ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 01-playbook.yaml
 
 # set of facts ansible is going to collect
-# ansible -i inv all -e ansible_user=centos -e ansible_password=DevP[s321 -m setup]
+# ansible -i inv all -e ansible_user=centos -e ansible_password=DevOps321 -m setup
+# connects to the destination instance and extracts Facts about the instance
