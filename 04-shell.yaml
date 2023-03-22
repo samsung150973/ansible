@@ -6,8 +6,8 @@
     ansible.builtin.shell: uptime
     register : OUT  # any name of a variable
 
-    - name: Print the OUT register
-       ansible.builtin.debug:
-       msg: {{OUT}} # name of a variable
+  - name: Print the OUT register
+    ansible.builtin.debug:
+    msg: {{OUT}} # name of a variable
 
 # The output is not as expected. Need to register the output
