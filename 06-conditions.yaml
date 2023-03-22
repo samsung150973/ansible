@@ -1,0 +1,7 @@
+- name: check if service is running or not
+  hosts: all
+  tasks:
+  - name: Execute when  distribution in CentOs
+      ansible.builtin.debug:
+        msg: welcome to CentOs
+      when: ansible_distribution == "Ubuntu"
