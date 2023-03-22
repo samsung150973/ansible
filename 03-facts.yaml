@@ -8,4 +8,8 @@
     - name: Printing a specific fact from the instances
       ansible.builtin.debug:
         msg: Distribution of this machine is {{ansible_distribution}}
-        
+
+    - name: Printing MAC address of machine ; which is nested query
+      ansible.builtin.debug:
+        msg: Distribution of this machine is {{ansible_default_ipv4.}}
+
