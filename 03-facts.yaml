@@ -1,0 +1,11 @@
+- name: Demo On facts
+  hosts: all # mention name of the inventory group -all
+  tasks:
+    - name: Print Hello 
+      ansible.builtin.debug:
+        msg: I am learning Ansible
+
+    - name: Printing a specific fact from the instances
+      ansible.builtin.debug:
+        msg: Distribution of this machine is {{ansible_distribution}}
+        
