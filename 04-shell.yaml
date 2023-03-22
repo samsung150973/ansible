@@ -1,8 +1,13 @@
 # when to execute if appropriate Model is not available - if a packeage is not on Ansible
-- name: Demo of variables
+- name: Demo of using register 
   hosts: all
   tasks:
   - name: demo using shell Modeule
     ansible.builtin.shell: uptime
+    register : OUT  # any name of a variable
 
-# restart all machine whaich are uptime more than 6 months 
+    - name: Print the OUT register
+       ansible.builtin.debug:
+       msg: {{OUT}} # name of a variable
+
+# The output is not as expected. Need to register the output
