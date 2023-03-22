@@ -22,4 +22,4 @@
       tags: cart
 
 # to execute commands on specific instances based on tag value. the command is as below
-# gp ; ansible-playbook -1 inv -e ansible_user=Centos -e ansible_password=DevOps321 07-tags.yaml -t frontend
+# gp ; ansible-playbook -i inv -e ansible_user=centos -e ansible_password=DevOps321 07-tags.yaml -t frontend
