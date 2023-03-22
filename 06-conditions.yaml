@@ -25,3 +25,5 @@
     when: action123 is not defined
     #  as the variable is not defined, the above will be executed
     # defined, not defined, true, false, succeed, failure are predefined key words
+    # Ref : https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_conditionals.html
+    
