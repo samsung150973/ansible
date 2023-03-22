@@ -1,5 +1,9 @@
 # when to execute if appropriate Model is not available - if a packeage is not on Ansible
-- name : demo using shell Modeule
-  ansible.builtin.shell:uptime
+- name: Demo of variables
+  hosts: all
+  tasks:
 
- 
+  - name: demo using shell Modeule
+    ansible.builtin.shell:uptime
+
+# restart all machine whaich are uptime more than 6 months 
