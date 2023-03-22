@@ -1,0 +1,5 @@
+# when to execute if appropriate Model is not available - if a packeage is not on Ansible
+- name : demo using shell Modeule
+  ansible.builtin.shell:uptime
+
+ 
