@@ -1,6 +1,6 @@
 - name: Demo on Priviledge escalation
   hosts: all
-  becaome: yes    # runs all the tasks  as root user
+  become: yes    # runs all the tasks  as root user
   tasks:
   - name: check user id
     ansible.builtin.shell: id
