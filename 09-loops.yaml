@@ -2,7 +2,7 @@
   hosts: all
   tasks:  -name: Demo on using loops 
     ansible.builtin.debug:
-      msg: Value is "{{item}}"  # iten is a ansible keyword for items in the loop
+      msg: "Value is {{item}}"  # iten is a ansible keyword for items in the loop
     loop: 
       -10
       -20
