@@ -13,7 +13,7 @@
   - name: check user id
     ansible.builtin.shell: id
     register: OUT1
-    become_user: centos
+    become_user: centos               # changes to centos user
 
   - name: Printing
     ansible.builtin.debug:
