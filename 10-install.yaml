@@ -1,5 +1,6 @@
 - name: Demo on package installation
   hosts: all
+  become: yes  #priviledge escalation , to intall nginx as root user
   tasks: 
     - name: install nginx
       ansible.builtin.package:
