@@ -8,3 +8,11 @@
   ansible.builtin.package:
     name: mongodb-org
     state: present
+
+# to search and replace the ip adress
+
+- name: Replace old IP with new
+  ansible.builtin.replace:
+    path: /etc/mongod.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
