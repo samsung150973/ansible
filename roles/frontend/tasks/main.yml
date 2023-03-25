@@ -1,3 +1,6 @@
-- name: Print a message
-  ansible.builtin.debug:
-    msg: Message from Frontend
+- name: install nginx
+  ansible.builtin.package:
+      name: nginx
+      state: present
+
+    # state : present - if package is not there to install.  latest - to update the package ; absent - to remove package
