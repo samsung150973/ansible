@@ -1,0 +1,5 @@
+- name: Print a message
+  tasks: 
+    - name: Message from Frontend
+      ansible.builtin.debug
+      msg: Message from Frontend
