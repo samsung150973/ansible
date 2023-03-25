@@ -4,3 +4,22 @@
       state: present
 
     # state : present - if package is not there to install.  latest - to update the package ; absent - to remove package
+
+- name: download and archieve
+  ansible.builtin.unarchive:
+    src: https://github.com/stans-robot-project/frontend/archive/main.zip
+    dest: /tmp
+    remote_src: yes
+    # remote_src option is required when performing copy
+
+- name: removing non-essential files
+  ansible.builtin.file:
+    path: //usr/share/nginx/html
+    state: absent
+    
+
+- name: Copying frontend code
+  ansible.builtin.copy:
+    src: /tmp/frontend-main/static/   
+    dest: /usr/share/nginx/html
+    remote_src: yes           # the source of file is on remote server , mention "remote_src: yes"
