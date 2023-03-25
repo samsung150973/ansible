@@ -1,0 +1,8 @@
+- name: Demo on copy
+  hosts: all
+  become: yes  #priviledge escalation , to intall nginx as root user
+  tasks: 
+    - name: Copy proxy file to the remote nodes
+      ansible.builtin.copy:
+        src: proxy.conf
+        dest: /home/centos/proxy.conf
