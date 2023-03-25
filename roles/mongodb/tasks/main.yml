@@ -1,0 +1,10 @@
+- name: Copying repo
+  ansible.builtin.copy:
+    src: mongo.repo 
+    dest: /etc/yum.repos.d/mongodb.repo
+    # the source of file is on local drive , so NO need of remote_src
+
+- name: install mongobd
+  ansible.builtin.package:
+    name: mongodb-org
+    state: present
