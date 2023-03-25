@@ -34,13 +34,13 @@
     remote_src: yes
     # remote_src option is required when performing copy on remote
   
-#inject schema
+#inject schema. runs a .js file containing MongodB commands
 - name: loading users schema 
   community.mongodb.mongodb_shell:
-  file: "/tmp/mongodb-main/users.js"
-  idempotent: yes
+    file: "/tmp/mongodb-main/users.js"
+    idempotent: yes
 
 - name: loading catalogue schema 
   community.mongodb.mongodb_shell:
-  file: "/tmp/mongodb-main/caalogue.js"
-  idempotent: yes
+    file: "/tmp/mongodb-main/caalogue.js"
+    idempotent: yes
