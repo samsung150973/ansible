@@ -28,7 +28,7 @@
     ansible.builtin.copy:
       src: roboshop.conf  
       dest: /etc/nginx/default.d/roboshop.conf
-         # the source of file is on local drive , so NO need of remote_src
+    # the source of file is on local drive , so NO need of remote_src
 
   # start service  and enable service
   - name: Restarting nginx
