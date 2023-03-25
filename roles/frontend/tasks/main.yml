@@ -2,4 +2,4 @@
   tasks: 
     - name: Message from Frontend
       ansible.builtin.debug
-      msg: Message from Frontend
+        msg: Message from Frontend
