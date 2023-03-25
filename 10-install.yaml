@@ -7,4 +7,4 @@
         name: nginx
         state: present
 
-    # prs
+    # state : present - if package is not there to install.  latest - to update the package ; absent - to remove package
