@@ -3,11 +3,11 @@
 
 - name: install node JS 
   ansible.builtin.package:
-    name: Nodejs  
+    name: nodejs  
     state: present
 
 # creating roboshop user account
-- name: creating s roboshop user account 
+- name: creating a roboshop user account 
   ansible.builtin.user:
     name: roboshop
     comment: Roboshop User account
