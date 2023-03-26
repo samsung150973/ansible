@@ -46,7 +46,7 @@
 - name: Copying component systemd file 
   ansible.builtin.copy:
     src: systemd.service  
-    dest: /etc/systemd/system/catalogue.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
     # the source of file is on local drive , so NO need of remote_src
 
 
