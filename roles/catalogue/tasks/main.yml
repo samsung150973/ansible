@@ -35,6 +35,13 @@
     group: "{{APPUSER}}"
     remote_src: yes           # the source of file is on remote server , mention "remote_src: yes"
 
+
+# performimg npm install. generating node modules
+- name: Generating Node Modules  
+  community.general.npm:
+    name: "coffee-script"
+    path: /home/{{APPUSER}}/{{COMPONENT}}/ 
+
 #
 - name: Copying component systemd file 
   ansible.builtin.copy:
