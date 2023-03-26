@@ -2,7 +2,7 @@
   ansible.builtin.shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | sudo bash -
 
 - name: install node JS 
-  ansible.builtin.package:
+  ansible.builtin.yum:
     name: nodejs  
     state: present
 
@@ -24,8 +24,7 @@
 - name: Performimg catalogue cleanup
   ansible.builtin.file:
     path: /home/{{APPUSER}}/{{COMPONENT}}/
-    state: absent
-
+    state: absent 
 
 - name: Copying the files to roboshop directory 
   ansible.builtin.copy:
@@ -34,27 +33,3 @@
     owner: "{{APPUSER}}"    # to have the roboshop as user of the files
     group: "{{APPUSER}}"
     remote_src: yes           # the source of file is on remote server , mention "remote_src: yes"
-
-
-# performimg npm install. generating node modules
-- name: Generating Node Modules  
-  community.general.npm:
-    name: "coffee-script"
-    path: /home/{{APPUSER}}/{{COMPONENT}}/ 
-
-#
-- name: Copying component systemd file 
-  ansible.builtin.copy:
-    src: systemd.service  
-    dest: /etc/systemd/system/{{COMPONENT}}.service
-    # the source of file is on local drive , so NO need of remote_src
-
-
-
-  # daemon reload and restart service  and enable service
-- name: Restarting the service
-  ansible.builtin.systemd:
-    state: restarted
-    daemon_reload: true
-    enabled: yes
-    name: "{{COMPONENT}}"
