@@ -1,0 +1,28 @@
+- name: Copying redis repo
+  ansible.builtin.copy:
+    src: redis.repo 
+    dest: /etc/yum.repos.d/redis.repo
+    # the source of file is on local drive , so NO need of remote_src
+
+- name: install redis
+  ansible.builtin.package:
+    name: redis-6.2.11
+    state: present
+
+# to search and replace the ip adress
+
+- name: Replace old IP with new
+  ansible.builtin.replace:
+    path: /etc/redis.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
+# start service and run
+
+  # start service  and enable service
+- name: starting redis
+  ansible.builtin.service:
+    name: redis
+    state: started
+    enabled: yes
+
