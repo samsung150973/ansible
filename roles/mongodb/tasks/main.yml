@@ -42,5 +42,5 @@
 
 - name: loading catalogue schema 
   community.mongodb.mongodb_shell:
-    file: "/tmp/mongodb-main/caalogue.js"
+    file: "/tmp/mongodb-main/catalogue.js"
     idempotent: yes
