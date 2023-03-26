@@ -1,0 +1,15 @@
+[Unit]
+Description = User Service
+[Service]
+User=roboshop
+Environment=MONGO=true
+Environment=REDIS_HOST=redis.roboshop.internal
+Environment=MONGO_URL="mongodb://mongodb.roboshop.internal:27017/users"
+ExecStart=/bin/node /home/roboshop/user/server.js
+SyslogIdentifier=user
+
+[Install]
+WantedBy=multi-user.target
+
+# The systemd file is obtained by downloading the file, unzipping it and viewing the systemd.system file in user-main directory
+# remane the REDIS_HOST & Mongo URL as shown above
