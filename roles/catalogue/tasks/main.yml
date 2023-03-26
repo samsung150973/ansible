@@ -34,3 +34,20 @@
     owner: "{{APPUSER}}"    # to have the roboshop as user of the files
     group: "{{APPUSER}}"
     remote_src: yes           # the source of file is on remote server , mention "remote_src: yes"
+
+#
+- name: Copying component systemd file 
+  ansible.builtin.copy:
+    src: systemd.service  
+    dest: /etc/systemd/system/catalogue.service
+    # the source of file is on local drive , so NO need of remote_src
+
+
+
+  # daemon reload and restart service  and enable service
+- name: Restarting the service
+  ansible.builtin.systemd:
+    state: restarted
+    daemon_reload: true
+    enabled: yes
+    name: "{{COMPONENT}}"
