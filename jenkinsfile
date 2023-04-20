@@ -1,11 +1,12 @@
 pipeline {
-    agent { label 'ws' }
+    agent { label 'ws' 
+    }
     environment {
         SSH_CREDENTIALS = credentials ('SSH_CRED')
     }
 
     stages {
-        stage('performing Ansible Dry Run') {
+        stage('performing Ansible Dry Run') {           // This stage only in for a Pull Request (PR) 
             steps {
                 sh "ansible-playbook robot-dryrun.yaml -e COMPONENT=mongodb -e ansible_user=${SSH_CREDENTIALS_USR} -e ansible_password=${SSH_CREDENTIALS_PSW} -e ENV=qa"
             }
